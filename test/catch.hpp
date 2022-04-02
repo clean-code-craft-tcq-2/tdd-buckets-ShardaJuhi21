@@ -1,19 +1,3 @@
-
-Skip to content
-Pull requests
-Issues
-Marketplace
-Explore
-@ShardaJuhi21
-clean-code-craft-tcq-2 /
-coverage-in-c-ShardaJuhi21
-Public
-generated from clean-code-craft-tcq-1/typewise-alert-c
-
-Code
-Issues
-Pull requests 1
-Actions
 /*
  *  Catch v2.13.0
  *  Generated: 2020-07-12 20:07:49.015950

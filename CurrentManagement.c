@@ -39,9 +39,8 @@ void printArray(int arr[], int size)
 }
  
 
-bool DetectRange(int *Array){
-    int n = sizeof(Array) / sizeof(Array[0]);
-     
+bool DetectRange(int *Array, int n){
+ 
        printf("Original array: \n");
       printArray(Array, n);
  

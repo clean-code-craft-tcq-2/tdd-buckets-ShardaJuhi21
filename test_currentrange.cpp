@@ -11,7 +11,7 @@ TEST_CASE("detect the ranges and output the number of readings in each range") {
      
   GIVEN( "An Array is not sorted" ) {
 
-        Validate one use case for the GIVEN object
+       // Validate one use case for the GIVEN object
        WHEN( " DetectRange() is called" ) {
             retVal = DetectRange(anArray, n);
 
@@ -21,10 +21,12 @@ TEST_CASE("detect the ranges and output the number of readings in each range") {
         }
     }
   
-  anArray[] ={3,3,4,5,10,11,12};
+  Readings[] ={3,3,4,5,10,11,12};
+       int n = sizeof(Readings) / sizeof(Readings[0]);
+     
    GIVEN( "An Array is sorted but it has repeated numbers" ) {
 
-        Validate one use case for the GIVEN object
+       // Validate one use case for the GIVEN object
        WHEN( " DetectRange() is called" ) {
             retVal = DetectRange(anArray, n);
 

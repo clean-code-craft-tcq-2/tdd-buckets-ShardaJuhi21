@@ -3,6 +3,7 @@
 #include "CurrentManagement.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <numeric.h>
 
 #define MAX_NUMBER_OF_READINGS 150
 int minValues[MAX_NUMBER_OF_READINGS] = {0};
@@ -77,8 +78,8 @@ int getMax(int arr[], int n)
 int RangeOfSamples(int* Readings, int n) {
     int rangeCounter = 0, readingsCounter = 0;
   
-    int max = getMax(arr, n);
-    int min = getMin(arr, n);
+    int max = getMax(Readings, n);
+    int min = getMin(Readings, n);
     int range = max - min;
   if(range+1==n) // if the number of elements between max and min including themselves equals size of array then proceed
   {

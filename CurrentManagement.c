@@ -2,6 +2,7 @@
 
 #include "CurrentManagement.h"
 #include <stdio.h>
+#include <stdlib>
 
 #define MAX_NUMBER_OF_READINGS 150
 

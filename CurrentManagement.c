@@ -3,6 +3,8 @@
 #include "CurrentManagement.h"
 #include <stdio.h>
 
+#define MAX_NUMBER_OF_READINGS 150
+
 void swap(int* xp, int* yp)
 {
     int temp = *xp;

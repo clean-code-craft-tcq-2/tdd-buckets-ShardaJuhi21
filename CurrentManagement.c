@@ -5,6 +5,9 @@
 #include <stdlib.h>
 
 #define MAX_NUMBER_OF_READINGS 150
+int minValues[MAX_NUMBER_OF_READINGS] = {0};
+int maxValues[MAX_NUMBER_OF_READINGS] = {0};
+int countValues[MAX_NUMBER_OF_READINGS] = {0};
 
 void swap(int* xp, int* yp)
 {
@@ -55,6 +58,46 @@ int * CountReadings(int * SortedArray,int n){
 
 }
 
+int getMin(int arr[], int n)
+{
+    int res = arr[0];
+    for (int i = 1; i < n; i++)
+        res = min(res, arr[i]);
+    return res;
+}
+ 
+int getMax(int arr[], int n)
+{
+    int res = arr[0];
+    for (int i = 1; i < n; i++)
+        res = max(res, arr[i]);
+    return res;
+}
+
+int RangeOfSamples(int* Readings, int n) {
+    int rangeCounter = 0, readingsCounter = 0;
+  
+    int max = getMax(arr, n);
+    int min = getMin(arr, n);
+    int range = max - min;
+  if(range+1==n) // if the number of elements between max and min including themselves equals size of array then proceed
+  {
+    int visited_nodes[n]={0};
+    if(readingsCounter != 0){
+    for(int i=0;i<n;i ++)
+      {
+           minValues[rangeCounter] = min;
+            maxValues[rangeCounter] = max;
+            countValues[rangeCounter] = readingsCounter;
+           rangeCounter++;
+        readingsCounter = 0;
+
+    }
+    }
+      printf("%d-%d, %d\n",minValues[i],maxValues[i],countValues[i])
+    return rangeCounter;
+}
+
 bool DetectRange(int *Array, int n){
  
       printf("Original array: \n");
@@ -62,7 +105,9 @@ bool DetectRange(int *Array, int n){
  
    int* SortedArray = Sort(Array, n);
    int* Readings = CountReadings(SortedArray, n);
+   int samples = RangeOfSamples( Readings,  n)
     printf("\nSorted array in Ascending order: \n");
     printArray(Array, n);
     return TRUE;
 }
+

@@ -39,7 +39,7 @@ void printArray(int arr[], int size)
     printf("\n");
 }
 
-int * CountReadings(int * SortedArray, n){
+int * CountReadings(int * SortedArray,int n){
     int *array;
     array = (int*)calloc(MAX_NUMBER_OF_READINGS, sizeof(int));
     

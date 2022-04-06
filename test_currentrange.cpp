@@ -2,6 +2,7 @@
 
 #include "test/catch.hpp"
 #include "CurrentManagement.h"
+#define MAX_NUMBER_OF_READINGS 150
 
 TEST_CASE("detect the ranges and output the number of readings in each range") {
   bool expectedVal = TRUE;

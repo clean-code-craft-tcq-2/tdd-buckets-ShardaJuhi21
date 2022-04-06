@@ -10,7 +10,7 @@ void swap(int* xp, int* yp)
     *yp = temp;
 }
  
-void Sort(int arr[], int n)
+int * Sort(int arr[], int n)
 {
     int i, j, min_idx;
  
@@ -26,6 +26,7 @@ void Sort(int arr[], int n)
         // Swap the found minimum element
         // with the first element
         swap(&arr[min_idx], &arr[i]);
+        return arr;
     }
 }
  
@@ -37,14 +38,27 @@ void printArray(int arr[], int size)
         printf("%d ", arr[i]);
     printf("\n");
 }
- 
+
+int * CountReadings(int * SortedArray, n){
+    int *array;
+    array = (int*)calloc(MAX_NUMBER_OF_READINGS, sizeof(int));
+    
+    for(int i=0; i<n; i++)
+    {
+        int index = SortedArray[i];
+        array[index]++;
+    }
+    return array;
+
+}
 
 bool DetectRange(int *Array, int n){
  
-       printf("Original array: \n");
+      printf("Original array: \n");
       printArray(Array, n);
  
-    Sort(Array, n);
+   int* SortedArray = Sort(Array, n);
+   int* Readings = CountReadings(SortedArray, n);
     printf("\nSorted array in Ascending order: \n");
     printArray(Array, n);
     return TRUE;

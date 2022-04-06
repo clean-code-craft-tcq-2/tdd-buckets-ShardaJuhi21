@@ -6,7 +6,7 @@
 TEST_CASE("detect the ranges and output the number of readings in each range") {
   bool expectedVal = TRUE;
   bool retVal = DetectRange();
-  REQUIRE(retVal == expected Val);
+  REQUIRE(retVal == expectedVal);
   
   
  }

@@ -11,7 +11,7 @@ TEST_CASE("detect the ranges and output the number of readings in each range") {
 
         // Validate one use case for the GIVEN object
         WHEN( " DetectRange() is called" ) {
-            DetectRange(anArray);
+            retVal = DetectRange(anArray);
 
             THEN( "whether the function returns true or not" ) {
                 REQUIRE( retVal == expectedVal );

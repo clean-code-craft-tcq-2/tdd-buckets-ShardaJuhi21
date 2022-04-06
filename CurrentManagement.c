@@ -43,6 +43,7 @@ void printArray(int arr[], int size)
     for (i = 0; i < size; i++)
         printf("%d ", arr[i]);
     printf("\n");
+                 printf("%d-%d, %d\n",minValues[i],maxValues[i],countValues[i]);
 }
 
 int * CountReadings(int * SortedArray,int n){
@@ -96,7 +97,7 @@ int RangeOfSamples(int* Readings, int n) {
             countValues[rangeCounter] = readingsCounter;
            rangeCounter++;
         readingsCounter = 0;
-             printf("%d-%d, %d\n",minValues[i],maxValues[i],countValues[i]);
+
 
     }}
     }

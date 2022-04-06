@@ -61,18 +61,22 @@ int * CountReadings(int * SortedArray,int n){
 int getMin(int arr[], int n)
 {
     int min = arr[0];
-    for (int i = 1; i < n; i++)
-       if( min>a[i]){
-          min=a[i] ;}
+    for (int i = 1; i < n; i++){
+       if( min>arr[i]){
+          min=arr[i] ;
+       }
+    }
     return min;
 }
  
 int getMax(int arr[], int n)
 {
     int max = arr[0];
-    for (int i = 1; i < n; i++)
-        if(max<a[i]){
-         max=a[i]   ;}
+    for (int i = 1; i < n; i++){
+        if(max<arr[i]){
+         max=arr[i]   ;
+        }
+    }
     return max;
 }
 
@@ -84,7 +88,6 @@ int RangeOfSamples(int* Readings, int n) {
     int range = max - min;
   if(range+1==n) // if the number of elements between max and min including themselves equals size of array then proceed
   {
-    int visited_nodes[n]={0};
     if(readingsCounter != 0){
     for(int i=0;i<n;i ++)
       {
@@ -93,10 +96,11 @@ int RangeOfSamples(int* Readings, int n) {
             countValues[rangeCounter] = readingsCounter;
            rangeCounter++;
         readingsCounter = 0;
+             printf("%d-%d, %d\n",minValues[i],maxValues[i],countValues[i])
 
     }
     }
-      printf("%d-%d, %d\n",minValues[i],maxValues[i],countValues[i])
+ 
     return rangeCounter;
 }
 

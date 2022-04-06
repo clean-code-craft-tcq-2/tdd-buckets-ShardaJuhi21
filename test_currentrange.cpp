@@ -9,17 +9,30 @@ TEST_CASE("detect the ranges and output the number of readings in each range") {
   int anArray[] ={5,3,4,10,11,12};
      int n = sizeof(anArray) / sizeof(anArray[0]);
      
-  //GIVEN( "An Array is not sorted" ) {
+  GIVEN( "An Array is not sorted" ) {
 
-        // Validate one use case for the GIVEN object
-       // WHEN( " DetectRange() is called" ) {
+        Validate one use case for the GIVEN object
+       WHEN( " DetectRange() is called" ) {
             retVal = DetectRange(anArray, n);
 
-            //THEN( "whether the function returns true or not" ) {
+            THEN( "whether the function returns true or not" ) {
                 REQUIRE( retVal == expectedVal );
-//             }
-//         }
-//     }
+            }
+        }
+    }
+  
+  anArray[] ={3,3,4,5,10,11,12};
+   GIVEN( "An Array is sorted but it has repeated numbers" ) {
+
+        Validate one use case for the GIVEN object
+       WHEN( " DetectRange() is called" ) {
+            retVal = DetectRange(anArray, n);
+
+            THEN( "whether the function returns true or not" ) {
+                REQUIRE( retVal == expectedVal );
+            }
+        }
+    }
   
   
  }

@@ -3,3 +3,4 @@
 
 
 bool DetectRange(int *Array, int n);
+int* CountReadings(int *SortedArray, n);

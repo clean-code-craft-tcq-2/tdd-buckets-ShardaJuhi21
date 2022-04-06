@@ -3,7 +3,6 @@
 #include "CurrentManagement.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <numeric.h>
 
 #define MAX_NUMBER_OF_READINGS 150
 int minValues[MAX_NUMBER_OF_READINGS] = {0};
@@ -61,18 +60,20 @@ int * CountReadings(int * SortedArray,int n){
 
 int getMin(int arr[], int n)
 {
-    int res = arr[0];
+    int min = arr[0];
     for (int i = 1; i < n; i++)
-        res = min(res, arr[i]);
-    return res;
+       if( min>a[i]){
+          min=a[i] ;}
+    return min;
 }
  
 int getMax(int arr[], int n)
 {
-    int res = arr[0];
+    int max = arr[0];
     for (int i = 1; i < n; i++)
-        res = max(res, arr[i]);
-    return res;
+        if(max<a[i]){
+         max=a[i]   ;}
+    return max;
 }
 
 int RangeOfSamples(int* Readings, int n) {

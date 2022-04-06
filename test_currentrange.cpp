@@ -6,8 +6,8 @@
 TEST_CASE("detect the ranges and output the number of readings in each range") {
   bool expectedVal = TRUE;
   bool retVal ;
-  int anArray[] ={3,4,5,10,11,12};
-  GIVEN( "An Array is sorted" ) {
+  int anArray[] ={5,3,4,10,11,12};
+  GIVEN( "An Array is not sorted" ) {
 
         // Validate one use case for the GIVEN object
         WHEN( " DetectRange() is called" ) {

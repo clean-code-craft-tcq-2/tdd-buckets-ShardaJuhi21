@@ -1,3 +1,5 @@
 #define TRUE 1
 #define FALSE 0
-bool DetectRange();
+
+
+bool DetectRange(int Array[10]);

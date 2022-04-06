@@ -2,4 +2,4 @@
 #define FALSE 0
 
 
-bool DetectRange(int *Array);
+bool DetectRange(int *Array, int n);

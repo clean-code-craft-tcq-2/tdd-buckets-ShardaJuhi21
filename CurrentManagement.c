@@ -111,7 +111,7 @@ bool DetectRange(int *Array, int n){
  
    int* SortedArray = Sort(Array, n);
    int* Readings = CountReadings(SortedArray, n);
-   int samples = RangeOfSamples( Readings,  n)
+   int samples = RangeOfSamples( Readings,  n);
     printf("\nSorted array in Ascending order: \n");
     printArray(Array, n);
     return TRUE;

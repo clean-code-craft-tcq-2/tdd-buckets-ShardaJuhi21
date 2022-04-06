@@ -48,5 +48,5 @@ bool DetectRange(int Array[10]){
     Sort(Array, n);
     printf("\nSorted array in Ascending order: \n");
     printArray(Array, n);
-return TRUE;
+    return TRUE;
 }

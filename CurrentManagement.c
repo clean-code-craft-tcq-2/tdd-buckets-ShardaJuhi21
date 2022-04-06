@@ -98,7 +98,7 @@ int RangeOfSamples(int* Readings, int n) {
         readingsCounter = 0;
              printf("%d-%d, %d\n",minValues[i],maxValues[i],countValues[i]);
 
-    }
+    }}
     }
  
     return rangeCounter;

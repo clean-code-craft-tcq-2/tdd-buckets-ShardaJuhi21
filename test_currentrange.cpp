@@ -21,14 +21,14 @@ TEST_CASE("detect the ranges and output the number of readings in each range") {
         }
     }
   
-  Readings[] ={3,3,4,5,10,11,12};
-       int n = sizeof(Readings) / sizeof(Readings[0]);
+  int Readings[] ={3,3,4,5,10,11,12};
+       int sizeofReadingArray = sizeof(Readings) / sizeof(Readings[0]);
      
    GIVEN( "An Array is sorted but it has repeated numbers" ) {
 
        // Validate one use case for the GIVEN object
        WHEN( " DetectRange() is called" ) {
-            retVal = DetectRange(anArray, n);
+            retVal = DetectRange(Readings, sizeofReadingArray);
 
             THEN( "whether the function returns true or not" ) {
                 REQUIRE( retVal == expectedVal );

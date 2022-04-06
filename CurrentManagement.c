@@ -4,5 +4,5 @@
 #include <stdio.h>
 
 bool DetectRange(){
-return FALSE;
+return TRUE;
 }

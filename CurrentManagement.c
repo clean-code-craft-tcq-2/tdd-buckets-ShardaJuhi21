@@ -133,7 +133,7 @@ int roundOffCurrentValue(float currentValue){
 
 int AbsoluteValue(int roundedChargingCurrentValue){
 	int CurrentValue = abs(roundedChargingCurrentValue);
-	return chargingCurrentValue;
+	return CurrentValue;
 }
 
 

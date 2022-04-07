@@ -131,16 +131,16 @@ int roundOffCurrentValue(float currentValue){
 	return roundedChargingCurrentValue;
 }
 
-int AbsoluteValue(int roundedChargingCurrentValue){
+void AbsoluteValue(int roundedChargingCurrentValue){
 	int CurrentValue = abs(roundedChargingCurrentValue);
-	return CurrentValue;
+	
+printf("%d\n",CurrentValue);
 }
 
 
 
 bool Sensors(int *Array, int n){
     int chargingCurrentValues;
-	int* AbsolutechargingCurrentValues;
 	float currentValue;
 	int roundOffValue;
 	
@@ -149,7 +149,7 @@ for (int i=0; i<n; i++){
 	 currentValue =A2DConversion(Array[i]);
 	 roundOffValue= roundOffCurrentValue(currentValue);
 	 chargingCurrentValues = roundOffCurrentValue(currentValue);
-	 AbsolutechargingCurrentValues[i] = AbsoluteValue(chargingCurrentValues);
+	 AbsoluteValue(chargingCurrentValues);
 
 }
     return TRUE;

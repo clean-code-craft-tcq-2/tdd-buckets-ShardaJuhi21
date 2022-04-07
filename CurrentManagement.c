@@ -144,8 +144,8 @@ bool Sensors(int *Array, int n){
 for (int i=0; i<n; i++){
 	 currentValue =A2DConversion(Array[i]);
 	 roundOffValue= roundOffCurrentValue(currentValue);
-	 chargingCurrentValues[i] = roundOffCurrentValue(currentValue);
-	 absValue = abs(chargingCurrentValues[i]);
+	 chargingCurrentValues = roundOffCurrentValue(currentValue);
+	 absValue = abs(chargingCurrentValues);
 	printf("%d\n",absValue);
 
 }

@@ -118,7 +118,7 @@ bool DetectRange(int *Array, int n){
 
 
 
-float  A2DConversion(int AnalogValue, int n){
+float  A2DConversion(int AnalogValue){
 	float currentValue;	
 	currentValue = 10 *( AnalogValue/ 4094);
 	return currentValue;
@@ -145,12 +145,14 @@ int checkIfValueIsAbsoluteAndConvert(int *chargingCurrentValue) {
 
 bool Sensors(int *Array, int n){
     int* chargingCurrentValues;
+	float currentValue;
+	int roundOffValue;
  
-for (size_t i=0; i<n; i++){
-		float currentValue =A2DConversion(Array[i], n);
-		int roundOffValue= roundOffCurrentValue(currentValue);
-		chargingCurrentValues[i] = roundOffCurrentValue(currentValue);
-		chargingCurrentValues[i] = checkIfValueIsAbsoluteAndConvert(&chargingCurrentValues[i]);
+for (int i=0; i<n; i++){
+	 currentValue =A2DConversion(Array[i]);
+	 roundOffValue= roundOffCurrentValue(currentValue);
+	 chargingCurrentValues[i] = roundOffCurrentValue(currentValue);
+	 chargingCurrentValues[i] = checkIfValueIsAbsoluteAndConvert(&chargingCurrentValues[i]);
 }
     return TRUE;
 }

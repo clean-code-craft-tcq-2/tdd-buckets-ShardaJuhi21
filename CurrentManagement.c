@@ -106,9 +106,7 @@ int RangeOfSamples(int* Readings, int n) {
 
 bool DetectRange(int *Array, int n){
  
-      printf("Original array: \n");
 
- 
    int* SortedArray = Sort(Array, n);
    int* Readings = CountReadings(SortedArray, n);
    int samples = RangeOfSamples( Readings,  n);

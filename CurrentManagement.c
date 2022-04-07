@@ -37,13 +37,12 @@ int * Sort(int arr[], int n)
 }
  
 // Function to print an array
-void printArray(int arr[], int size)
+void printArray(int Sequence)
 {
-    int i;
-    for (i = 0; i < size; i++)
-        printf("%d ", arr[i]);
-    printf("\n");
-                 printf("%d-%d, %d\n",minValues[i],maxValues[i],countValues[i]);
+    for(int i=0; i<Sequence; i++)
+    {
+        printf("%d-%d, %d\n",minValues[i],maxValues[i],countValues[i]);
+    }
 }
 
 int * CountReadings(int * SortedArray,int n){
@@ -108,13 +107,12 @@ int RangeOfSamples(int* Readings, int n) {
 bool DetectRange(int *Array, int n){
  
       printf("Original array: \n");
-      printArray(Array, n);
+
  
    int* SortedArray = Sort(Array, n);
    int* Readings = CountReadings(SortedArray, n);
    int samples = RangeOfSamples( Readings,  n);
-    printf("\nSorted array in Ascending order: \n");
-    printArray(Array, n);
+    (void)printArray(samples);
     return TRUE;
 }
 

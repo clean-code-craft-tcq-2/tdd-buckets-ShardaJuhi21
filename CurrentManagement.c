@@ -138,25 +138,19 @@ int AbsoluteValue(int roundedChargingCurrentValue){
 
 
 
-
-// int checkIfValueIsAbsoluteAndConvert(int *chargingCurrentValue) {
-// 	return (*chargingCurrentValue < 0) ? AbsoluteValue(*chargingCurrentValue) : *chargingCurrentValue;
-// }
-
 bool Sensors(int *Array, int n){
-    int* chargingCurrentValues;
+    int chargingCurrentValues;
 	int* AbsolutechargingCurrentValues;
 	float currentValue;
 	int roundOffValue;
-	int AbsValue;
+	
  
 for (int i=0; i<n; i++){
 	 currentValue =A2DConversion(Array[i]);
 	 roundOffValue= roundOffCurrentValue(currentValue);
-	 chargingCurrentValues[i] = roundOffCurrentValue(currentValue);
-	AbsValue = chargingCurrentValues[i];
-	 AbsolutechargingCurrentValues[i] = AbsoluteValue(AbsValue);
-	 //chargingCurrentValues[i] = checkIfValueIsAbsoluteAndConvert(&chargingCurrentValues[i]);
+	 chargingCurrentValues = roundOffCurrentValue(currentValue);
+	 AbsolutechargingCurrentValues[i] = AbsoluteValue(chargingCurrentValues);
+
 }
     return TRUE;
 }

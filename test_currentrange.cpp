@@ -43,8 +43,8 @@ TEST_CASE("detect the ranges and output the number of readings in each range") {
 TEST_CASE("Convert in A2D") {
   bool expectedVal = TRUE;
   bool retVal ;
- int 12bit_anArray[] ={5,3,4,10,11,12,7,8,9,1,2,3};
-int sizeofReadingArray = sizeof(12bit_anArray) / sizeof(12bit_anArray[0]);
+ int 12bitArray[] ={5,3,4,10,11,12,7,8,9,1,2,3};
+int sizeofReadingArray = sizeof(12bitArray) / sizeof(12bitArray[0]);
      
   GIVEN( "An Array is 12 bit Array" ) {
 
@@ -58,14 +58,14 @@ int sizeofReadingArray = sizeof(12bit_anArray) / sizeof(12bit_anArray[0]);
         }
     }
   
-  int 10bit_Reading[] ={5,3,4,10,11,12,7,8,9,1};
-       int sizeofReadingArray = sizeof(10bit_Reading) / sizeof(10bit_Reading[0]);
+  int 10bitReading[] ={5,3,4,10,11,12,7,8,9,1};
+       int sizeofReadingArray = sizeof(10bitReading) / sizeof(10bitReading[0]);
      
    GIVEN( "An Array is sorted but it has repeated numbers" ) {
 
        // Validate one use case for the GIVEN object
        WHEN( " Sensors() is called" ) {
-            retVal = Sensors(10bit_Reading,sizeofReadingArray);
+            retVal = Sensors(10bitReading,sizeofReadingArray);
 
             THEN( "whether the function returns true or not" ) {
                 REQUIRE( retVal == expectedVal );

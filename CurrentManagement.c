@@ -16,7 +16,7 @@ void swap(int* xp, int* yp)
     *yp = temp;
 }
  
-int * Sort(int arr[], int n)
+int* Sort(int arr[], int n)
 {
     int i, j, min_idx;
  

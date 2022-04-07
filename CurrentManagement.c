@@ -131,9 +131,9 @@ int roundOffCurrentValue(float currentValue){
 	return roundedChargingCurrentValue;
 }
 
-int AbsoluteValue(int *roundedChargingCurrentValue){
-	int *CurrentValue = abs(roundedChargingCurrentValue);
-	return *CurrentValue;
+int AbsoluteValue(int roundedChargingCurrentValue){
+	int CurrentValue = abs(roundedChargingCurrentValue);
+	return CurrentValue;
 }
 
 
@@ -153,7 +153,7 @@ for (int i=0; i<n; i++){
 	 currentValue =A2DConversion(Array[i]);
 	 roundOffValue= roundOffCurrentValue(currentValue);
 	 chargingCurrentValues[i] = roundOffCurrentValue(currentValue);
-	 AbsolutechargingCurrentValues[i] = AbsoluteValue(&chargingCurrentValues[i]);
+	 AbsolutechargingCurrentValues[i] = AbsoluteValue(chargingCurrentValues[i]);
 	 //chargingCurrentValues[i] = checkIfValueIsAbsoluteAndConvert(&chargingCurrentValues[i]);
 }
     return TRUE;

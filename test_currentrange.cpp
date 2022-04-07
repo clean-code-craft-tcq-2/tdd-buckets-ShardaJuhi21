@@ -50,7 +50,7 @@ int sizeofReadingArray = sizeof(Array) / sizeof(Array[0]);
 
        // Validate one use case for the GIVEN object
        WHEN( "Sensors() is called" ) {
-            retVal = Sensors(Array, n);
+            retVal = Sensors(Array, sizeofReadingArray);
 
             THEN( "whether the function returns true or not" ) {
                 REQUIRE( retVal == expectedVal );
@@ -59,13 +59,13 @@ int sizeofReadingArray = sizeof(Array) / sizeof(Array[0]);
     }
   
   int Reading[] ={5,3,4,10,11,12,7,8,9,1};
-       int sizeofReadingArray = sizeof(Reading) / sizeof(Reading[0]);
+       int ReadingArray = sizeof(Reading) / sizeof(Reading[0]);
      
    GIVEN( "An Array is sorted but it has repeated numbers" ) {
 
        // Validate one use case for the GIVEN object
        WHEN( " Sensors() is called" ) {
-            retVal = Sensors(Reading,sizeofReadingArray);
+            retVal = Sensors(Reading,ReadingArray);
 
             THEN( "whether the function returns true or not" ) {
                 REQUIRE( retVal == expectedVal );

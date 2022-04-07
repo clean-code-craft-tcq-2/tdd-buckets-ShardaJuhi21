@@ -146,7 +146,7 @@ for (int i=0; i<n; i++){
 	 roundOffValue= roundOffCurrentValue(currentValue);
 	 chargingCurrentValues[i] = roundOffCurrentValue(currentValue);
 	 absValue = abs(chargingCurrentValues[i]);
-	printf("%d\n", CurrentValue);
+	printf("%d\n",absValue);
 
 }
     return TRUE;

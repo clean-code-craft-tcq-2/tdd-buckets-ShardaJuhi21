@@ -145,8 +145,8 @@ for (int i=0; i<n; i++){
 	 currentValue =A2DConversion(Array[i]);
 	 roundOffValue= roundOffCurrentValue(currentValue);
 	 chargingCurrentValues = roundOffCurrentValue(currentValue);
-	 absValue = abs(chargingCurrentValues);
-	printf("%d\n",absValue);
+
+	printf("%d\n",chargingCurrentValues);
 
 }
     return TRUE;

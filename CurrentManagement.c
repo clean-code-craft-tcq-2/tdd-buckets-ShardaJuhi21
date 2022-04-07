@@ -32,8 +32,9 @@ int* Sort(int arr[], int n)
         // Swap the found minimum element
         // with the first element
         swap(&arr[min_idx], &arr[i]);
-        return arr;
+        
     }
+    return arr;
 }
  
 // Function to print an array

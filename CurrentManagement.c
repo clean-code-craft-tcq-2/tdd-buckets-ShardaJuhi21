@@ -148,12 +148,14 @@ bool Sensors(int *Array, int n){
 	int* AbsolutechargingCurrentValues;
 	float currentValue;
 	int roundOffValue;
+	int AbsValue;
  
 for (int i=0; i<n; i++){
 	 currentValue =A2DConversion(Array[i]);
 	 roundOffValue= roundOffCurrentValue(currentValue);
 	 chargingCurrentValues[i] = roundOffCurrentValue(currentValue);
-	 AbsolutechargingCurrentValues[i] = AbsoluteValue(chargingCurrentValues[i]);
+	AbsValue = chargingCurrentValues[i];
+	 AbsolutechargingCurrentValues[i] = AbsoluteValue(AbsValue);
 	 //chargingCurrentValues[i] = checkIfValueIsAbsoluteAndConvert(&chargingCurrentValues[i]);
 }
     return TRUE;

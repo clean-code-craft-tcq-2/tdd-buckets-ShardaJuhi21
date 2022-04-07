@@ -3,6 +3,7 @@
 #include "CurrentManagement.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 #define MAX_NUMBER_OF_READINGS 150
 int minValues[MAX_NUMBER_OF_READINGS] = {0};
@@ -115,3 +116,41 @@ bool DetectRange(int *Array, int n){
     return TRUE;
 }
 
+
+
+float  A2DConversion(int AnalogValue, int n){
+	float currentValue;	
+	currentValue = 10 *( AnalogValue/ 4094);
+	return currentValue;
+
+}
+
+int roundOffCurrentValue(float currentValue){
+	int roundedChargingCurrentValue;
+	roundedChargingCurrentValue = round(currentValue);
+	return roundedChargingCurrentValue;
+}
+
+int AbsoluteValue(int roundedChargingCurrentValue){
+	CurrentValue = abs(roundedChargingCurrentValue);
+	return chargingCurrentValue;
+}
+
+
+
+
+int checkIfValueIsAbsoluteAndConvert(int *chargingCurrentValue) {
+	return (*chargingCurrentValue < 0) ? AbsoluteValue(*chargingCurrentValue) : *chargingCurrentValue;
+}
+
+bool Sensors(int *Array, int n){
+    int* chargingCurrentValues;
+ 
+for (size_t i=0; i<n; i++){
+		float currentValue =A2DConversion(Array[i], n);
+		int roundOffValue= roundOffCurrentValue(currentValue);
+		chargingCurrentValues[i] = roundOffCurrentValue(currentValue);
+		chargingCurrentValues[i] = checkIfValueIsAbsoluteAndConvert(&chargingCurrentValues[i]);
+}
+    return TRUE;
+}
